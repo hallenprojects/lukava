@@ -378,6 +378,7 @@ html {
     box-shadow: var(--shadow-subtle);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .menu-item:hover {
@@ -389,6 +390,7 @@ html {
     position: relative;
     height: 280px;
     overflow: hidden;
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
 }
 
 .menu-img-placeholder {
@@ -398,6 +400,21 @@ html {
     background-position: center;
     transition: transform 0.6s ease;
     position: relative;
+    opacity: 0.35;
+    filter: blur(60px);
+}
+
+.menu-img-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(212, 175, 55, 0.08);
+    border: 2px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50%;
 }
 
 .menu-img-placeholder::before {
@@ -408,7 +425,8 @@ html {
     right: 0;
     bottom: 0;
     background: 
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter></defs><rect width="400" height="400" filter="url(%23noise)" opacity="0.05"/></svg>');
+        radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.03) 100%);
     mix-blend-mode: overlay;
 }
 
@@ -427,7 +445,8 @@ html {
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    z-index: 2;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-content {
@@ -551,7 +570,7 @@ html {
     width: 100%;
     height: 600px;
     background: 
-        linear-gradient(135deg, rgba(139, 69, 19, 0.9) 0%, rgba(193, 125, 60, 0.9) 100%),
+        linear-gradient(135deg, rgba(139, 69, 19, 0.95) 0%, rgba(193, 125, 60, 0.95) 100%),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4"/></filter></defs><rect width="400" height="400" filter="url(%23noise)" opacity="0.1"/></svg>');
     display: flex;
     flex-direction: column;
@@ -560,8 +579,8 @@ html {
     color: var(--white);
     box-shadow: var(--shadow-medium);
     position: relative;
-    overflow: hidden;
-    padding: 3rem;
+    overflow: visible;
+    padding: 3rem 2rem;
 }
 
 .about-stats {
@@ -574,25 +593,27 @@ html {
 .stat-item {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stat-item h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: var(--accent-gold);
     margin-bottom: 0.5rem;
+    white-space: nowrap;
 }
 
 .stat-item p {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
+    line-height: 1.4;
 }
 
 /* Contact Section */
@@ -862,6 +883,23 @@ html {
 
     .image-placeholder {
         height: 400px;
+        padding: 2rem 1rem;
+    }
+
+    .about-stats {
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.7rem;
     }
 
     .contact-grid {
