@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lukava Fast Food - Delicious shawarma, kebabs, and chicken schnitzel sandwiches">
+    <meta name="description" content="Lukava Fast Food - Delicious shawarma, kebabs, and chicken schnitzel">
     <title>Lukava Fast Food - Fresh & Delicious</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1><span class="logo-main">LUKAVA</span><span class="logo-sub">FAST FOOD</span></h1>
+                <h1>LUKAVA <span>FAST FOOD</span></h1>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -33,32 +33,215 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="hero-badge">AUTHENTIC FLAVORS</span>
-            <h1 class="hero-title">Where Taste<br>Meets Perfection</h1>
-            <p class="hero-description">Handcrafted shawarma, succulent kebabs, and crispy schnitzel<br>prepared fresh daily with premium ingredients</p>
+            <h1>Where Taste Meets Perfection</h1>
+            <p>Handcrafted shawarma, succulent kebabs, and crispy schnitzel prepared fresh daily with premium ingredients</p>
             <div class="hero-buttons">
                 <a href="#menu" class="btn btn-primary">View Menu</a>
                 <a href="#contact" class="btn btn-secondary">Order Now</a>
             </div>
         </div>
-        <div class="hero-scroll">
-            <span>Scroll to Explore</span>
-            <div class="scroll-indicator"></div>
-        </div>
     </section>
+
 
     <!-- Menu Section -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">OUR SPECIALTIES</span>
-                <h2 class="section-title">Signature Dishes</h2>
-                <p class="section-subtitle">Each dish crafted to perfection with premium ingredients and authentic recipes</p>
-            </div>
+            <h2>Our Menu</h2>
+            <p class="subtitle">Each dish crafted to perfection with premium ingredients</p>
             
             <div class="menu-grid">
+                <!-- Shawarma -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <span class="badge">POPULAR</span>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Shawarma</h3>
+                        <p>Tender marinated meat slow-cooked on a vertical spit, wrapped in warm pita with crisp vegetables and our signature garlic sauce</p>
+                        <div class="variants">
+                            <span>Chicken</span>
+                            <span>Beef</span>
+                            <span>Mixed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kebabs -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <span class="badge">CHEF'S CHOICE</span>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Grilled Kebabs</h3>
+                        <p>Perfectly seasoned meat skewers charcoal-grilled to juicy perfection, served with basmati rice and fresh salad</p>
+                        <div class="variants">
+                            <span>Chicken</span>
+                            <span>Lamb</span>
+                            <span>Beef</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schnitzel -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <span class="badge">CRISPY</span>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Schnitzel Sandwich</h3>
+                        <p>Premium chicken breast, double-breaded and fried to golden perfection in a fresh baguette with lettuce, tomatoes, and mayo</p>
+                        <div class="variants">
+                            <span>Classic</span>
+                            <span>Spicy</span>
+                            <span>Deluxe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combos -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <span class="badge">VALUE</span>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Combo Meals</h3>
+                        <p>Your choice of main dish with golden hand-cut fries and a refreshing beverage</p>
+                        <div class="variants">
+                            <span>Regular</span>
+                            <span>Large</span>
+                            <span>Family</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="menu-item">
+                    <div class="menu-image"></div>
+                    <div class="menu-content">
+                        <h3>Sides & Extras</h3>
+                        <p>Crispy fries, creamy hummus, fresh garden salads, and more Mediterranean sides</p>
+                        <div class="variants">
+                            <span>Fries</span>
+                            <span>Hummus</span>
+                            <span>Salad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item">
+                    <div class="menu-image"></div>
+                    <div class="menu-content">
+                        <h3>Beverages</h3>
+                        <p>Refresh yourself with our selection of soft drinks, fresh juices, and traditional beverages</p>
+                        <div class="variants">
+                            <span>Sodas</span>
+                            <span>Juices</span>
+                            <span>Water</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>At Lukava Fast Food, we don't just serve meals – we create experiences. Every shawarma is wrapped with precision, every kebab is grilled to perfection, and every schnitzel achieves that perfect golden crunch.</p>
+                    <p>Our secret? A relentless commitment to quality. We source the finest ingredients, marinate our meats for hours in signature spice blends, and cook everything fresh to order.</p>
+                    <div class="features">
+                        <div class="feature">✓ Premium Ingredients</div>
+                        <div class="feature">✓ Authentic Recipes</div>
+                        <div class="feature">✓ Made Fresh Daily</div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="subtitle">Visit us or reach out for orders and inquiries</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>123 Food Street<br>Your City, 12345</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Hours</h4>
+                        <p>Mon-Sun<br>10:00 AM - 10:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>info@lukavafood.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>LUKAVA FAST FOOD</h3>
+                    <p>Where quality meets flavor</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <p>Facebook | Instagram | Twitter</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lukava Fast Food. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
                 <!-- Shawarma -->
                 <div class="menu-item">
                     <div class="menu-image">
