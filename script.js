@@ -1,6 +1,7 @@
 // Mobile Navigation Toggle
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('navLinks');
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('.navbar');
 
 burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
@@ -15,80 +16,70 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-    }
-});
-
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const formData = new FormData(contactForm);
-    
-    // Show success message (in a real app, you'd send this to a server)
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
-});
-
-// Smooth scroll for navigation links (backup for browsers that don't support scroll-behavior)
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     });
 });
 
-// Animate menu items on scroll
+// Navbar background on scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        nav.style.background = 'rgba(10,10,10,0.98)';
+    } else {
+        nav.style.background = 'rgba(10,10,10,0.95)';
+    }
+});
+
+// Form submission
+const contactForm = document.querySelector('.contact-form form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your order! We will contact you shortly to confirm.');
+        contactForm.reset();
+    });
+}
+
+// Add hover effect to menu cards
+const menuCards = document.querySelectorAll('.menu-card');
+menuCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Animate elements on scroll
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'all 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, 100);
-            
-            observer.unobserve(entry.target);
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
     });
 }, observerOptions);
 
-// Observe all menu items
-document.querySelectorAll('.menu-item').forEach(item => {
-    observer.observe(item);
-});
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
+// Observe menu cards and sections
+document.querySelectorAll('.menu-card, .about-container, .contact-grid').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease-out';
+    observer.observe(el);
 });
