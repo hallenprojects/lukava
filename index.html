@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>🌯 Lukava Fast Food</h1>
+                <h1><span class="logo-main">LUKAVA</span><span class="logo-sub">FAST FOOD</span></h1>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -33,96 +33,161 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to Lukava Fast Food</h1>
-            <p class="hero-subtitle">Fresh, Flavorful, and Fast!</p>
-            <p class="hero-description">Serving the best shawarma, kebabs, and chicken schnitzel sandwiches in town</p>
-            <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+            <span class="hero-badge">AUTHENTIC FLAVORS</span>
+            <h1 class="hero-title">Where Taste<br>Meets Perfection</h1>
+            <p class="hero-description">Handcrafted shawarma, succulent kebabs, and crispy schnitzel<br>prepared fresh daily with premium ingredients</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to Explore</span>
+            <div class="scroll-indicator"></div>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <h2 class="section-title">Our Delicious Menu</h2>
-            <p class="section-subtitle">Freshly prepared with the finest ingredients</p>
+            <div class="section-header">
+                <span class="section-badge">OUR SPECIALTIES</span>
+                <h2 class="section-title">Signature Dishes</h2>
+                <p class="section-subtitle">Each dish crafted to perfection with premium ingredients and authentic recipes</p>
+            </div>
             
             <div class="menu-grid">
                 <!-- Shawarma -->
                 <div class="menu-item">
-                    <div class="menu-icon">🌯</div>
-                    <h3>Shawarma</h3>
-                    <p>Tender marinated meat wrapped in warm pita bread with fresh vegetables and our special sauce</p>
-                    <div class="menu-variants">
-                        <span class="variant">Chicken</span>
-                        <span class="variant">Beef</span>
-                        <span class="variant">Mixed</span>
+                    <div class="menu-image">
+                        <div class="menu-img-placeholder" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);"></div>
+                        <div class="menu-badge">POPULAR</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Shawarma</h3>
+                        <p>Tender marinated meat slow-cooked on a vertical spit, wrapped in warm pita bread with crisp vegetables, tahini, and our signature garlic sauce</p>
+                        <div class="menu-variants">
+                            <span class="variant">Chicken</span>
+                            <span class="variant">Beef</span>
+                            <span class="variant">Mixed</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Kebabs -->
                 <div class="menu-item">
-                    <div class="menu-icon">🍢</div>
-                    <h3>Kebabs</h3>
-                    <p>Grilled to perfection, served with aromatic rice, fresh salad, and tangy garlic sauce</p>
-                    <div class="menu-variants">
-                        <span class="variant">Chicken</span>
-                        <span class="variant">Lamb</span>
-                        <span class="variant">Beef</span>
+                    <div class="menu-image">
+                        <div class="menu-img-placeholder" style="background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);"></div>
+                        <div class="menu-badge">CHEF'S CHOICE</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Grilled Kebabs</h3>
+                        <p>Perfectly seasoned meat skewers charcoal-grilled to juicy perfection, served with aromatic basmati rice, fresh salad, and zesty garlic sauce</p>
+                        <div class="menu-variants">
+                            <span class="variant">Chicken</span>
+                            <span class="variant">Lamb</span>
+                            <span class="variant">Beef</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Chicken Schnitzel Sandwich -->
                 <div class="menu-item">
-                    <div class="menu-icon">🍗</div>
-                    <h3>Chicken Schnitzel Sandwich</h3>
-                    <p>Crispy breaded chicken breast in a fresh baguette with lettuce, tomatoes, pickles, and mayo</p>
-                    <div class="menu-variants">
-                        <span class="variant">Classic</span>
-                        <span class="variant">Spicy</span>
-                        <span class="variant">Deluxe</span>
+                    <div class="menu-image">
+                        <div class="menu-img-placeholder" style="background: linear-gradient(135deg, #CD853F 0%, #F4A460 100%);"></div>
+                        <div class="menu-badge">CRISPY</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Schnitzel Sandwich</h3>
+                        <p>Premium chicken breast, double-breaded and fried to golden perfection, nestled in a fresh baguette with crispy lettuce, ripe tomatoes, pickles, and creamy mayo</p>
+                        <div class="menu-variants">
+                            <span class="variant">Classic</span>
+                            <span class="variant">Spicy</span>
+                            <span class="variant">Deluxe</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Combo Meals -->
                 <div class="menu-item">
-                    <div class="menu-icon">🍟</div>
-                    <h3>Combo Meals</h3>
-                    <p>Any main dish with fries and a drink - the perfect complete meal for any appetite</p>
-                    <div class="menu-variants">
-                        <span class="variant">Regular</span>
-                        <span class="variant">Large</span>
-                        <span class="variant">Family</span>
+                    <div class="menu-image">
+                        <div class="menu-img-placeholder" style="background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);"></div>
+                        <div class="menu-badge">VALUE</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Combo Meals</h3>
+                        <p>Your choice of main dish paired with golden hand-cut fries and a refreshing beverage - a complete feast for any appetite</p>
+                        <div class="menu-variants">
+                            <span class="variant">Regular</span>
+                            <span class="variant">Large</span>
+                            <span class="variant">Family</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Sides -->
                 <div class="menu-item">
-                    <div class="menu-icon">🥗</div>
-                    <h3>Sides & Extras</h3>
-                    <p>Complete your meal with our delicious sides and appetizers</p>
-                    <div class="menu-variants">
-                        <span class="variant">Fries</span>
-                        <span class="variant">Hummus</span>
-                        <span class="variant">Salad</span>
+                    <div class="menu-image">
+                        <div class="menu-img-placeholder" style="background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);"></div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Sides & Extras</h3>
+                        <p>Elevate your meal with authentic Mediterranean sides - crispy fries, creamy hummus, and fresh garden salads</p>
+                        <div classimage">
+                    <div class="image-placeholder">
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3>15+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>50K+</h3>
+                                <p>Happy Customers</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Drinks -->
-                <div class="menu-item">
-                    <div class="menu-icon">🥤</div>
-                    <h3>Beverages</h3>
-                    <p>Refresh yourself with our selection of cold drinks and fresh juices</p>
-                    <div class="menu-variants">
-                        <span class="variant">Soft Drinks</span>
-                        <span class="variant">Juices</span>
-                        <span class="variant">Water</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+                <div class="about-text">
+                    <span class="section-badge">OUR STORY</span>
+                    <h2 class="section-title">Crafting Excellence<br>Since Day One</h2>
+                    <p>At Lukava Fast Food, we don't just serve meals – we create experiences. Every shawarma is wrapped with precision, every kebab is grilled to perfection, and every schnitzel achieves that perfect golden crunch.</p>
+                    <p>Our secret? A relentless commitment to quality. We source the finest ingredients, marinate our meats for hours in signature spice blends, and cook everything fresh to order. No shortcuts, no compromises.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Premium Ingredients</h4>
+                                <p>Sourced daily from trusted suppliers</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Authentic Recipes</h4>
+                                <p>Traditional flavors with modern techniques</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Made Fresh Daily</h4>
+                                <p>Every dish prepared to order</p>
+                            </div>
+                        </div
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
@@ -137,28 +202,50 @@
                             <span>Fresh Daily Ingredients</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Fast & Friendly Service</span>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Affordable Prices</span>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Authentic Flavors</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <span class="placeholder-icon">🍽️</span>
-                        <p>Fresh & Delicious</p>
-                    </div>
-                </div>
+             div class="section-header">
+                <span class="section-badge">VISIT US</span>
+                <h2 class="section-title">Come Taste The Difference</h2>
+                <p class="section-subtitle">Stop by for a meal that will keep you coming back for more</p>
             </div>
-        </div>
-    </section>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Location</h3>
+                        <p>123 Food Street<br>Your City, 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3>Hours</h3>
+                        <p>Mon-Sun<br>10:00 AM - 10:00 PM</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -168,29 +255,41 @@
             
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <h3>Location</h3>
-                        <p>123 Food Street<br>Your City, 12345</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <h3>Phone</h3>
-                        <p>+1 (555) 123-4567</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
-                        <h3>Hours</h3>
-                        <p>Mon-Sun: 10:00 AM - 10:00 PM</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <h3>Email</h3>
-                        <p>info@lukavafastfood.com</p>
+                    <div<span class="logo-main">LUKAVA</span></h3>
+                    <p>Where quality meets flavor.<br>Every bite tells a story.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="contact-form">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lukava Fast Food. All rights reserved. Crafted with passion
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" placeholder="Your Name" required>
